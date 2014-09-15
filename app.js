@@ -2,7 +2,8 @@ $(document).ready(function() {
 	// Functions
 	function addItem() {
 		$("ol").append("<li>" + $("input").val() + "<span class=\"right\">x</span></li>");
-		$("ol li").last().on("click", removeItem);
+		$("ol li").last().on("click", checkItem);
+		$(".right").on("click", removeItem);
 		$("input").val("");
 	}
 	function removeItem() {
